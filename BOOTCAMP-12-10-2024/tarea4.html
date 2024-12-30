@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            margin-left: 10px;
+        }
+        .login-form, .patient-form, .pedido-form {
+            margin: 10px;
+        }
+        .login-form input, .patient-form input, .pedido-form input, .pedido-form select {
+            margin-right: 5px;
+            padding: 5px;
+            width: 250px;
+        }
+        .login-form button, .patient-form button, .pedido-form button {
+            padding: 5px 10px;
+        }
+        .pedido-form input[type="radio"], .pedido-form select {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formularios en HTML</h1>
+
+    <!-- Formulario de Inicio de sesión -->
+    <div class="login-form">
+        <form action="/iniciar-sesion" method="POST">
+            <input type="text" placeholder="ingresa tu nombre" name="nombre" required>
+            <input type="password" placeholder="ingresa tu password" name="password" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <h2>Cita Pacientes</h2>
+    <div class="patient-form">
+        <form action="https://eolhgdijpr98pqd.m.pipedream.net" method="POST">
+            <label for="nombre-paciente">Nombre del paciente:</label>
+            <input type="text" id="nombre-paciente" placeholder="Nombre del Paciente" name="nombre-paciente" required>
+            <input type="email" placeholder="ingresa tu correo" name="email" required>
+            <input type="date" name="fecha-cita" required>
+            <button type="submit">Enviar datos</button>
+        </form>
+    </div>
+
+    <h2>Pedido de Pastel y Pizza</h2>
+    <div class="pedido-form">
+        <!-- Elección de sabor -->
+        <form action="https://eolhgdijpr98pqd.m.pipedream.net" method="POST">
+
+            <label for="sabor">Elige tu sabor:</label><br>
+            <input type="radio" name="sabor" value="Chocolate"> Chocolate
+            <input type="radio" name="sabor" value="Cafe"> Café
+            <input type="radio" name="sabor" value="Mango"> Mango
+    
+            <!-- Ingreso de celular y foto para el pastel -->
+            <div>
+                <label for="celular">Ingresa tu N. Celular:</label>
+                <input type="text" id="celular" name="celular" placeholder="Número celular">
+            </div>
+            <div>
+                <label for="foto">Ingresa la foto para el pastel:</label>
+                <input type="file" id="foto" name="foto">
+            </div>
+    
+            <!-- Elección de pizza -->
+            <div>
+                <label for="pizza">Elige tu Pizza:</label>
+                <select id="pizza" name="pizza">
+                    <option value="Americana">Americana</option>
+                    <option value="Hawaiana">Hawaiana</option>
+                    <option value="Vegetariana">Vegetariana</option>
+                </select>
+            </div>
+    
+            <!-- Programación de entrega -->
+            <div>
+                <label for="hora">Programa la entrega:</label>
+                <input type="time" id="hora" name="hora">
+            </div>
+    
+            <!-- Perfil de LinkedIn -->
+            <div>
+                <label for="perfil">Ingresa tu perfil de LinkedIn:</label>
+                <input type="text" id="perfil" name="perfil" placeholder="Perfil LinkedIn">
+            </div>
+    
+            <!-- Botón para enviar el pedido -->
+            <div>
+                <button type="submit">Pedir Pizza</button>
+            </div>
+        </form>
+
+
+
+
+       
+    </div>
+
+</body>
+</html>
